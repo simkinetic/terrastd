@@ -1,0 +1,9 @@
+{
+  "name": "terrastd",
+  "uuid": "d38cb13b-f524-4528-8350-3eaccb42afc5",
+  "authors": [
+    "[renehiemstra]rene.r.hiemstra@gmail.com"
+  ],
+  "language": "terra",
+  "version": "v0.1.0"
+}

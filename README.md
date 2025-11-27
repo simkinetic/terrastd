@@ -1,3 +1,6 @@
+[![CI Status](https://img.shields.io/github/actions/workflow/status/simkinetic/terrastd/ci.yml?branch=main&style=flat-square)](https://github.com/simkinetic/terrastd/actions)
+
+
 # terrastd
 Standard library functionality for the Terra programming languange. The following functionality is supported:
 * Allocators, smart unique pointers, weak pointers, etc

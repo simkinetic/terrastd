@@ -1,4 +1,4 @@
-name: ci-apptainer-archlinux
+name: ci-docker-amd64
 
 on:
   push:
@@ -9,19 +9,16 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/simkinetic/arch-apptainer:latest
-      options: --privileged
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Pull Apptainer image
-        run: apptainer pull ci-terra.sif oras://ghcr.io/simkinetic/ci-terra:latest
+      - name: Pull Docker image
+        run: docker pull ghcr.io/simkinetic/terra-amd64:latest
       - name: Run tests
         id: run-tests
         run: |
           # Run tests, capture output and exit code
-          OUTPUT=$(apptainer exec --bind $PWD:/app ci-terra.sif bash -c "cosm activate && . /app/.cosm/.env && terra test/testrunner.t --test" 2>&1 || echo "Execution failed with exit code $?" >&2)
+          OUTPUT=$(docker run --rm -v $PWD:/app -w /app ghcr.io/simkinetic/terra-amd64:latest bash -c "cosm activate && . /app/.cosm/.env && terra test/testrunner.t --test" 2>&1 || echo "Execution failed with exit code $?" >&2)
           EXIT_CODE=$?
 
           # Save output to temporary file for parsing
@@ -49,9 +46,6 @@ jobs:
             echo "Test failures or execution errors detected"
             exit 1
           fi
-      - name: Clean Apptainer cache
-        run: apptainer cache clean --force
-        if: always()
       - name: Summarize test results
         run: |
           echo "Test Summary:"

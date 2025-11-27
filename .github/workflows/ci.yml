@@ -18,7 +18,7 @@ jobs:
         id: run-tests
         run: |
           # Run tests, capture output and exit code
-          OUTPUT=$(docker run --rm -v $PWD:/app -w /app ghcr.io/simkinetic/terra-amd64:latest bash -c "cosm activate && . /app/.cosm/.env && terra test/testrunner.t --test" 2>&1 || echo "Execution failed with exit code $?" >&2)
+          OUTPUT=$(docker run --rm -v $PWD:/app -w /app -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} ghcr.io/simkinetic/terra-amd64:latest bash -c "git config --global url.\"https://oauth2:\$GITHUB_TOKEN@github.com/\".insteadOf \"git@github.com:\" && cosm activate && . /app/.cosm/.env && terra test/testrunner.t --test" 2>&1 || echo "Execution failed with exit code $?" >&2)
           EXIT_CODE=$?
 
           # Save output to temporary file for parsing

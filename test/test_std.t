@@ -1,0 +1,27 @@
+-- SPDX-FileCopyrightText: 2024 - 2025 René Hiemstra <rrhiemstar@gmail.com>
+-- SPDX-FileCopyrightText: 2024 - 2025 Torsten Keßler <t.kessler@posteo.de>
+--
+-- SPDX-License-Identifier: MIT
+
+import "terratest@v1/terratest"
+import "std@v0/terraform"
+
+local std = require("std@v0/std")
+
+
+-- test the public API
+testenv "std" do
+
+    testset "terraform" do
+        terraform product(x, y)
+            return x * y
+        end
+        test product(2, 3) == 6
+    end
+
+    testset "core" do
+        --test access to allocator library
+        local DefaultAllocator = std.alloc.DefaultAllocator()
+    end
+
+end

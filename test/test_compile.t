@@ -24,8 +24,8 @@ end
 
 testenv "Generate C API" do
     local terra add(x: int, y: rawstring, z: double): &opaque end
-    local name = "testgenerate"
-    compile.generateCAPI("testgenerate", {add = add})
+    local name = "test/testgenerate"
+    compile.generateCAPI(name, {add = add})
     local input = io.open(name .. ".h", "r")
     local header = input:read("*a")
     input:close()

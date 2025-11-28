@@ -7,7 +7,7 @@ local prefix = arg[-1]
 
 -- Is this a test file?
 local function istestfile(filename)
-    return string.sub(filename, 1, 4) == "test" and filename ~= "testrunner.t"
+    return string.sub(filename, 1, 5) == "test_"
 end
 
 -- Turn list into a set

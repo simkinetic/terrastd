@@ -227,7 +227,7 @@ end)
 -- Wrapper around the full implementation of the PCG generator (64 bit), see
 -- https://www.pcg-random.org/
 local pcgvar = setmetatable(
-	terralib.includec("pcg/pcg_variants.h"),
+	terralib.includec("./pcg/pcg_variants.h"),
 	{__index = (
 			function(self, key)
 				return self["pcg_" .. key] or rawget(self, key)

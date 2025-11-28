@@ -11,7 +11,7 @@ local parametrized = require("parametrized")
 local range = require("range")
 local string = terralib.includec("string.h")
 
-local C = terralib.includec("hashmap/hashmap.h")
+local C = terralib.includec("./hashmap/hashmap.h")
 local ffi = require("ffi")
 local OS = ffi.os
 if OS == "Linux" then

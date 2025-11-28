@@ -14,11 +14,34 @@ jobs:
         uses: actions/checkout@v4
       - name: Pull Docker image
         run: docker pull ghcr.io/simkinetic/terra-amd64:latest
+      - name: Build
+        id: build
+        run: |
+          # Run build, capture output and exit code
+          OUTPUT=$(docker run --rm -v $PWD:/app -w /app -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} ghcr.io/simkinetic/terra-amd64:latest bash -c "git config --global url.\"https://oauth2:\$GITHUB_TOKEN@github.com/\".insteadOf \"git@github.com:\" && make all" 2>&1 || echo "Execution failed with exit code $?" >&2)
+          EXIT_CODE=$?
+
+          # Save output to temporary file
+          echo "$OUTPUT" > build_output.txt
+          
+          # Store exit code for next step
+          echo "EXIT_CODE=$EXIT_CODE" >> $GITHUB_ENV
+      - name: Check build results
+        run: |
+          # Print build output
+          echo "Build Output:"
+          cat build_output.txt
+          
+          # Fail if exit code is non-zero
+          if [ "${{ env.EXIT_CODE }}" -ne 0 ]; then
+            echo "Build failures or execution errors detected"
+            exit 1
+          fi
       - name: Run tests
         id: run-tests
         run: |
           # Run tests, capture output and exit code
-          OUTPUT=$(docker run --rm -v $PWD:/app -w /app -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} ghcr.io/simkinetic/terra-amd64:latest bash -c "git config --global url.\"https://oauth2:\$GITHUB_TOKEN@github.com/\".insteadOf \"git@github.com:\" && make all && cosm activate && . /app/.cosm/.env && terra test/testrunner.t --test" 2>&1 || echo "Execution failed with exit code $?" >&2)
+          OUTPUT=$(docker run --rm -v $PWD:/app -w /app -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} ghcr.io/simkinetic/terra-amd64:latest bash -c "git config --global url.\"https://oauth2:\$GITHUB_TOKEN@github.com/\".insteadOf \"git@github.com:\" && cosm activate && . /app/.cosm/.env && terra test/testrunner.t --test" 2>&1 || echo "Execution failed with exit code $?" >&2)
           EXIT_CODE=$?
 
           # Save output to temporary file for parsing

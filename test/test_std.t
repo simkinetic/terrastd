@@ -24,4 +24,16 @@ testenv "std" do
         local DefaultAllocator = std.alloc.DefaultAllocator()
     end
 
+
+    local complex_t = std.scalar.complex.complex(double)
+    local im = complex_t:unit()
+
+    testset "Initialization" do
+        terracode
+            var x = complex_t.from(1, 2) 
+            var y = 1 + 2 * im
+        end
+        test x == y
+    end
+
 end

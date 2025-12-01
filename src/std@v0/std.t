@@ -7,13 +7,14 @@ local libmap = {
     base = "base",
     compile = "compile",
     concepts = "concepts",
+    fun = "fun",
     interfaces = "interface",
     lambda = "lambda",
     parametrized = "parametrized",
     span = "span",
     ranges = "range",
-    assert = "assert",
     threads = "thread",
+    tuple = "tuple"
 }
 
 -- Get any of the libraries in the table above
@@ -40,6 +41,6 @@ end
 
 return setmetatable({}, {
     __index = function(t, key)
-        return rawget(t, key) or getcorelib(t, key) or getspecializedlib(t, key) or error("CompileError: not a valid library.")
+        return rawget(t, key) or getcorelib(t, key) or getspecializedlib(t, key) or error("CompileError:" .. tostring(key) " is not a valid library.")
     end
 })

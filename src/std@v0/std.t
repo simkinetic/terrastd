@@ -41,6 +41,6 @@ end
 
 return setmetatable({}, {
     __index = function(t, key)
-        return rawget(t, key) or getcorelib(t, key) or getspecializedlib(t, key) or error("CompileError:" .. tostring(key) " is not a valid library.")
+        return rawget(t, key) or getcorelib(t, key) or getspecializedlib(t, key) or error("CompileError:" .. tostring(key) .." is not a valid library.")
     end
 })

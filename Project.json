@@ -5,7 +5,7 @@
     "[renehiemstra]rene.r.hiemstra@gmail.com"
   ],
   "language": "terra",
-  "version": "v0.6.0",
+  "version": "v0.6.1",
   "deps": {
     "4510efb2-5399-47b1-a173-7e7c2ca7b288@v1": {
       "name": "terratest",

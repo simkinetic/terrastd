@@ -28,12 +28,19 @@ testenv "std" do
     local complex_t = std.scalar.complex.complex(double)
     local im = complex_t:unit()
 
-    testset "Initialization" do
+    testset "scalar" do
         terracode
             var x = complex_t.from(1, 2) 
             var y = 1 + 2 * im
         end
         test x == y
+    end
+
+    testset "debug" do
+        terracode
+            std.debug.assert(10 > 1)
+        end
+        test 1 == 1
     end
 
 end

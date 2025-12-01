@@ -17,7 +17,7 @@ local libmap = {
     threads = "thread",
     tuple = "tuple",
     -- bundled modules
-    debug = "std_debug",
+    debug = "assert",
     io = "std_io",
     scalar = "std_scalar",
     vector = "std_vector",

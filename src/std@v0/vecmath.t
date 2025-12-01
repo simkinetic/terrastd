@@ -17,7 +17,7 @@ local function has_avx512_support()
 end
 
 local ext = (require("ffi").os == "Linux" and ".so" or ".dylib")
-terralib.linklibrary("lib/std@v0/libsleef" .. ext)
+terralib.linklibrary("std@v0/libsleef" .. ext)
 
 -- SSE and AArch64
 local supported_width = terralib.newlist({128})

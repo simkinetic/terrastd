@@ -15,9 +15,9 @@ local C = terralib.includec("./hashmap/hashmap.h")
 local ffi = require("ffi")
 local OS = ffi.os
 if OS == "Linux" then
-    terralib.linklibrary("lib/std@v0/libhash.so")
+    terralib.linklibrary("std@v0/libhash.so")
 else
-    terralib.linklibrary("lib/std@v0/libhash.dylib")
+    terralib.linklibrary("std@v0/libhash.dylib")
 end
 
 import "std@v0/terraform"

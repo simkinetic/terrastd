@@ -26,6 +26,10 @@ local libmap = {
 
 return setmetatable({}, {
     __index = function(t, key)
-        return require("std@v0/" .. libmap[key])
+        if libmap[key] then
+            return require("std@v0/" .. libmap[key])
+        else
+            error("No such library std@v0/" .. tostring(key))
+        end
     end
 })

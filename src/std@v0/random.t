@@ -18,11 +18,11 @@ import "std@v0/terraform"
 -- Compile C libraries with make first before using this module
 local uname = io.popen("uname", "r"):read("*a")
 if uname == "Darwin\n" then
-	terralib.linklibrary("./lib/std@v0/libtinymt.dylib")
-	terralib.linklibrary("lib/std@v0/libpcg.dylib")
+	terralib.linklibrary("std@v0/libtinymt.dylib")
+	terralib.linklibrary("std@v0/libpcg.dylib")
 elseif uname == "Linux\n" then
-	terralib.linklibrary("lib/std@v0/libtinymt.so")
-	terralib.linklibrary("lib/std@v0/libpcg.so")
+	terralib.linklibrary("std@v0/libtinymt.so")
+	terralib.linklibrary("std@v0/libpcg.so")
 else
 	error("OS Unknown")
 end

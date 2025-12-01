@@ -3,12 +3,12 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base")
-local concepts = require("concepts")
-local err = require("assert")
-local range = require("range")
-local tpl = require("tuple")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local err = require("std@v0/assert")
+local range = require("std@v0/range")
+local tpl = require("std@v0/tuple")
+local parametrized = require("std@v0/parametrized")
 
 local DYNAMIC_EXTEND = setmetatable(
     {}, {__tostring = function(self) return "DynamicExtend" end}

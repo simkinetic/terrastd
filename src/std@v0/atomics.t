@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
-local concepts = require("concepts")
+import "std@v0/terraform"
+local concepts = require("std@v0/concepts")
 
 local terraform atomic_store(trg: &T, src: T) where {T: concepts.Primitive}
     escape

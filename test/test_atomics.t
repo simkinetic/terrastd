@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local atomics = require("atomics")
+local atomics = require("std@v0/atomics")
 
 import "terratest@v1/terratest"
 

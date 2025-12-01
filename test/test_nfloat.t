@@ -6,8 +6,8 @@
 import "terratest@v1/terratest"
 
 local C = terralib.includec("string.h")
-local nfloat = require("nfloat")
-local tmath = require("tmath")
+local nfloat = require("std@v0/nfloat")
+local tmath = require("std@v0/tmath")
 
 
 local suffix = {64, 128, 192, 256, 384, 512, 1024, 2048, 4096}

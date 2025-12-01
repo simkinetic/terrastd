@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local tree = require("tree")
-local alloc = require("alloc")
+local tree = require("std@v0/tree")
+local alloc = require("std@v0/alloc")
 local io = terralib.includec("stdio.h")
 
 local DefaultAllocator = alloc.DefaultAllocator()

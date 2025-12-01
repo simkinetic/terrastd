@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local simd = require("simd")
+local simd = require("std@v0/simd")
 
 import "terratest@v1/terratest"
 

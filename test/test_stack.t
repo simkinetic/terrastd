@@ -4,8 +4,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local alloc = require('alloc')
-local stack = require("stack")
+local alloc = require("std@v0/alloc")
+local stack = require("std@v0/stack")
 
 import "terratest@v1/terratest"
 

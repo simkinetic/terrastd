@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local random = require("random")
+local random = require("std@v0/random")
 
 import "terratest@v1/terratest"
 

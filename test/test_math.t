@@ -5,7 +5,7 @@
 
 import "terratest@v1/terratest"
 
-local tmath = require("tmath")
+local tmath = require("std@v0/tmath")
 local io = terralib.includec("stdio.h")
 local C = terralib.includec("string.h")
 

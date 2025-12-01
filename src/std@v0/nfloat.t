@@ -18,14 +18,14 @@ else
     error("Not implemented for this OS.")
 end
 
-import "terraform"
+import "std@v0/terraform"
 
 local C = terralib.includec("stdio.h")
 
-local base = require("base")
-local tmath = require("tmath")
-local concepts = require("concepts")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local tmath = require("std@v0/tmath")
+local concepts = require("std@v0/concepts")
+local parametrized = require("std@v0/parametrized")
 
 local suffix = {64, 128, 192, 256, 384, 512, 1024, 2048, 4096}
 local float_type = {}

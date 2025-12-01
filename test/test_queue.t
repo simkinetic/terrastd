@@ -3,10 +3,10 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local alloc = require("alloc")
-local atomics = require("atomics")
-local thread = require("thread")
-local queue = require("queue")
+local alloc = require("std@v0/alloc")
+local atomics = require("std@v0/atomics")
+local thread = require("std@v0/thread")
+local queue = require("std@v0/queue")
 
 import "terratest@v1/terratest"
 

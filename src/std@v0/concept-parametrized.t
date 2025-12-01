@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local concepts = require("concept-impl")
-local template = require("template")
+local concepts = require("std@v0/concept-impl")
+local template = require("std@v0/template")
 
 local function isempty(tab)
     return next(tab) == nil

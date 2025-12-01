@@ -3,10 +3,10 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local concepts = require("concept-impl")
-local base = require("base")
-local fun = require("fun")
-local serde = require("serde")
+local concepts = require("std@v0/concept-impl")
+local base = require("std@v0/base")
+local fun = require("std@v0/fun")
+local serde = require("std@v0/serde")
 
 local Template = {}
 

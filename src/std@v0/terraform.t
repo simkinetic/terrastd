@@ -3,11 +3,11 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base")
-local template = require("template")
+local base = require("std@v0/base")
+local template = require("std@v0/template")
 local concepts = {}
-concepts.impl = require("concept-impl")
-concepts.para = require("concept-parametrized")
+concepts.impl = require("std@v0/concept-impl")
+concepts.para = require("std@v0/concept-parametrized")
 
 local generate_terrafun, parse_terraform_statement, process_free_function_statement, process_class_method_statement
 local namespace, process_method_name, process_where_clause, process_template_parameters, get_template_parameter_list, process_namespace_indexing

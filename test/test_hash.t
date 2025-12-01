@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local alloc = require("alloc")
-local hash = require("hash")
+local alloc = require("std@v0/alloc")
+local hash = require("std@v0/hash")
 local string = terralib.includec("string.h")
 
 local HashMap = hash.HashMap(rawstring, int32)

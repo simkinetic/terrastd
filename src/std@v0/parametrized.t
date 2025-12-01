@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local concepts = require("concept-impl")
-local serde = require("serde")
+local concepts = require("std@v0/concept-impl")
+local serde = require("std@v0/serde")
 
 local function admissible(arg)
     -- Checks if arg is convertible to a raw table.

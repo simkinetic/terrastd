@@ -6,10 +6,10 @@
 import "terratest@v1/terratest"
 
 local C = terralib.includec("string.h")
-local tmath = require("tmath")
-local concepts = require("concepts")
-local complex = require("complex")
-local nfloat = require("nfloat")
+local tmath = require("std@v0/tmath")
+local concepts = require("std@v0/concepts")
+local complex = require("std@v0/complex")
+local nfloat = require("std@v0/nfloat")
 
 local float256 = nfloat.FixedFloat(256)
 

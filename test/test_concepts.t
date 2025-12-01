@@ -3,11 +3,11 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base")
-local concepts = require("concepts")
-local paramlist = require("concept-parametrized").paramlist
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local paramlist = require("std@v0/concept-parametrized").paramlist
 
-import "terraform"
+import "std@v0/terraform"
 import "terratest@v1/terratest"
 
 local Any = concepts.Any

@@ -3,12 +3,12 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base")
-local concepts = require("concepts")
-local tmath = require("tmath")
-local vecmath = require("vecmath")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local tmath = require("std@v0/tmath")
+local vecmath = require("std@v0/vecmath")
 
-import "terraform"
+import "std@v0/terraform"
 
 local VectorPCG = terralib.memoize(function(F, N)
     local I = uint32

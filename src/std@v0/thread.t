@@ -5,16 +5,16 @@
 
 require "terralibext"
 
-local alloc = require("alloc")
-local atomics = require("atomics")
-local base = require("base")
-local parametrized = require("parametrized")
-local pthread = require("pthread")
-local queue = require("queue")
-local span = require("span")
-local stack = require("stack")
+local alloc = require("std@v0/alloc")
+local atomics = require("std@v0/atomics")
+local base = require("std@v0/base")
+local parametrized = require("std@v0/parametrized")
+local pthread = require("std@v0/pthread")
+local queue = require("std@v0/queue")
+local span = require("std@v0/span")
+local stack = require("std@v0/stack")
 
-import "terraform"
+import "std@v0/terraform"
 
 local cond = pthread.cond
 local hardware_concurrency = pthread.hardware_concurrency

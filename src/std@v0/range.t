@@ -3,16 +3,16 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
+import "std@v0/terraform"
 
-local base = require("base")
-local concepts = require("concepts")
-local template = require("template")
-local lambda = require("lambda")
-local tmath = require("tmath")
-local nfloat = require("nfloat")
-local err = require("assert")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local template = require("std@v0/template")
+local lambda = require("std@v0/lambda")
+local tmath = require("std@v0/tmath")
+local nfloat = require("std@v0/nfloat")
+local err = require("std@v0/assert")
+local parametrized = require("std@v0/parametrized")
 
 local size_t = uint64
 

@@ -3,10 +3,10 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local alloc = require("alloc")
-local base = require("base")
-local range = require("range")
-local parametrized = require("parametrized")
+local alloc = require("std@v0/alloc")
+local base = require("std@v0/base")
+local range = require("std@v0/range")
+local parametrized = require("std@v0/parametrized")
 
 local BinaryTree = parametrized.type(function(T)
     local struct tree

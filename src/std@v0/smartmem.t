@@ -9,17 +9,17 @@ local C = terralib.includecstring[[
     #include <string.h>
 ]]
 
-local base = require("base")
-local interface = require("interface")
-local range = require("range")
-local err = require("assert")
-local serde = require("serde")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local interface = require("std@v0/interface")
+local range = require("std@v0/range")
+local err = require("std@v0/assert")
+local serde = require("std@v0/serde")
+local parametrized = require("std@v0/parametrized")
 
 local size_t = uint64
 local u8 = uint8
 
-import "terraform"
+import "std@v0/terraform"
 
 local function Base(block, T, options)
 

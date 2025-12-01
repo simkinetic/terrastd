@@ -4,12 +4,12 @@
 -- SPDX-License-Identifier: MIT
 
 require("terralibext")
-local base = require("base")
-local alloc = require("alloc")
-local err = require("assert")
-local concepts = require("concepts")
-local range = require("range")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local alloc = require("std@v0/alloc")
+local err = require("std@v0/assert")
+local concepts = require("std@v0/concepts")
+local range = require("std@v0/range")
+local parametrized = require("std@v0/parametrized")
 
 local Allocator = alloc.Allocator
 

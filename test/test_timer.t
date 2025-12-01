@@ -7,7 +7,7 @@ import "terratest@v1/terratest"
 
 if not __silent__ then
 
-	local time = require("timing")
+	local time = require("std@v0/timing")
 	local uni = terralib.includec("unistd.h")
 	local io = terralib.includec("stdio.h")
 

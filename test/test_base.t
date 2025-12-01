@@ -5,7 +5,7 @@
 
 import "terratest@v1/terratest"
 
-local base = require("base")
+local base = require("std@v0/base")
 
 testenv "New Base" do
 	local Foo = base.Base:new("Foo", function(T) error("Catch me if you can!") end)

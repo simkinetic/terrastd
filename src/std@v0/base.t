@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local concepts = require("concept-impl")
+local concepts = require("std@v0/concept-impl")
 
 local Base = {}
 

@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local blend = require("blend")
+local blend = require("std@v0/blend")
 local C = terralib.includec("math.h")
 
 import "terratest@v1/terratest"

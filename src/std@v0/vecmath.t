@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
+import "std@v0/terraform"
 
 local function has_avx512_support()
     if require("ffi").os ~= "Linux" then

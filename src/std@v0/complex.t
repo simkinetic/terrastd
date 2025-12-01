@@ -10,10 +10,10 @@ local C = terralib.includecstring[[
     #include <math.h>
 ]]
 
-local base = require("base")
-local concepts = require("concepts")
-local tmath = require("tmath")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local tmath = require("std@v0/tmath")
+local parametrized = require("std@v0/parametrized")
 
 local complex = parametrized.type(function(T)
 

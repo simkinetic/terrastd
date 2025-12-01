@@ -3,13 +3,13 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local alloc = require("alloc")
-local base = require("base")
-local random = require("random")
-local range = require("range")
-local tree = require("tree")
-local thread = require("thread")
-local tmath = require("tmath")
+local alloc = require("std@v0/alloc")
+local base = require("std@v0/base")
+local random = require("std@v0/random")
+local range = require("std@v0/range")
+local tree = require("std@v0/tree")
+local thread = require("std@v0/thread")
+local tmath = require("std@v0/tmath")
 
 import "terratest@v1/terratest"
 
@@ -184,8 +184,8 @@ testenv "Basic data structures" do
 end
 
 testenv "Parallel for" do
-    local lambda = require("lambda")
-    local range = require("range")
+    local lambda = require("std@v0/lambda")
+    local range = require("std@v0/range")
 
     local NITEMS = 65
     testset "Linear range" do

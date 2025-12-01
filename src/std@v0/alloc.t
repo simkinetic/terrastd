@@ -26,16 +26,16 @@ end
 
 require "terralibext"
 
-local atomics = require("atomics")
-local base = require("base")
-local serde = require("serde")
-local interface = require("interface")
-local smartmem = require("smartmem")
-local err = require("assert")
-local pthread = require("pthread")
-local parametrized = require("parametrized")
+local atomics = require("std@v0/atomics")
+local base = require("std@v0/base")
+local serde = require("std@v0/serde")
+local interface = require("std@v0/interface")
+local smartmem = require("std@v0/smartmem")
+local err = require("std@v0/assert")
+local pthread = require("std@v0/pthread")
+local parametrized = require("std@v0/parametrized")
 
-import "terraform"
+import "std@v0/terraform"
 
 local size_t = uint64
 

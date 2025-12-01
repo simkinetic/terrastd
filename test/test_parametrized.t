@@ -3,11 +3,11 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local parametrized = require("parametrized")
-local concepts = require("concepts")
+local parametrized = require("std@v0/parametrized")
+local concepts = require("std@v0/concepts")
 
 import "terratest@v1/terratest"
-import "terraform"
+import "std@v0/terraform"
 
 testenv "Parametrized types" do
     local Point = parametrized.type(function(T)

@@ -4,7 +4,7 @@
 -- SPDX-License-Identifier: MIT
 
 import "terratest@v1/terratest"
-local lambda = require("lambda")
+local lambda = require("std@v0/lambda")
 
 testenv "lambda's" do
 

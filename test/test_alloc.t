@@ -5,7 +5,7 @@
 
 import "terratest@v1/terratest"
 
-local alloc = require("alloc")
+local alloc = require("std@v0/alloc")
 
 --test serialization of options table in Lua for the 
 --default allocator
@@ -305,7 +305,7 @@ for _, alignment in ipairs{0, 64} do
     end
 end
 
-import "terraform"
+import "std@v0/terraform"
 
 local DefaultAllocator = alloc.DefaultAllocator()
 

@@ -3,12 +3,12 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
+import "std@v0/terraform"
 require "terralibext"
 
-local base = require("base")
-local concepts = require("concepts")
-local template = require("template")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local template = require("std@v0/template")
 local json = setmetatable(
     terralib.includec("json-c/json.h"),
     {

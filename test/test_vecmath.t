@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local vecmath = require("vecmath")
-local tmath = require("tmath")
+local vecmath = require("std@v0/vecmath")
+local tmath = require("std@v0/tmath")
 
 import "terratest@v1/terratest"
 

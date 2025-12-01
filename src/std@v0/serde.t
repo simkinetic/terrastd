@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local tuple = require("tuple")
+local tuple = require("std@v0/tuple")
 
 local function get_local_vars()
   --[=[
@@ -71,7 +71,7 @@ local function striplist(a)
   return b
 end
 
-local serpent = require("serpent")
+local serpent = require("std@v0/serpent")
 local function serialize_table(tab)
 	return serpent.dump(striplist(tab), {sortkeys = true})
 end

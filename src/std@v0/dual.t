@@ -3,11 +3,11 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base")
-local blend = require("blend")
-local concepts = require("concepts")
-local tmath = require("tmath")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local blend = require("std@v0/blend")
+local concepts = require("std@v0/concepts")
+local tmath = require("std@v0/tmath")
+local parametrized = require("std@v0/parametrized")
 local io = terralib.includec("stdio.h")
 
 

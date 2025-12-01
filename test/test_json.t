@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local json = require("json")
+local json = require("std@v0/json")
 
 import "terratest@v1/terratest"
 

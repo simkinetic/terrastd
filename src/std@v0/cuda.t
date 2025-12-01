@@ -4,8 +4,8 @@
 -- SPDX-License-Identifier: MIT
 
 local cuda = {}
-local alloc = require("alloc")
-local err = require("assert")
+local alloc = require("std@v0/alloc")
+local err = require("std@v0/assert")
 
 local C = terralib.includec("cuda_runtime.h")
 

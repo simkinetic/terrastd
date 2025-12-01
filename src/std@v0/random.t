@@ -8,12 +8,12 @@ local C = terralib.includecstring[[
   #include <stdlib.h> // random()
   #include <math.h>
 ]]
-local base = require("base")
-local concepts = require("concepts")
-local err = require("assert")
-local parametrized = require("parametrized")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local err = require("std@v0/assert")
+local parametrized = require("std@v0/parametrized")
 
-import "terraform"
+import "std@v0/terraform"
 
 -- Compile C libraries with make first before using this module
 local uname = io.popen("uname", "r"):read("*a")

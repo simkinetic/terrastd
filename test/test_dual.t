@@ -5,9 +5,9 @@
 
 import "terratest@v1/terratest"
 
-local dual = require("dual")
-local lambda = require("lambda")
-local tmath = require("tmath")
+local dual = require("std@v0/dual")
+local lambda = require("std@v0/lambda")
+local tmath = require("std@v0/tmath")
 
 for T, tol in pairs({[float] = `1e-6f, [double] = `1e-14}) do
     testenv(T) "Dual Number" do

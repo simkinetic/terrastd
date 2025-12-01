@@ -3,12 +3,12 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local alloc = require("alloc")
-local base = require("base")
-local concepts = require("concepts")
-local err = require("assert")
-local parametrized = require("parametrized")
-local range = require("range")
+local alloc = require("std@v0/alloc")
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local err = require("std@v0/assert")
+local parametrized = require("std@v0/parametrized")
+local range = require("std@v0/range")
 local string = terralib.includec("string.h")
 
 local C = terralib.includec("./hashmap/hashmap.h")
@@ -20,7 +20,7 @@ else
     terralib.linklibrary("src/std@v0/hashmap/libhash.dylib")
 end
 
-import "terraform"
+import "std@v0/terraform"
 
 local primitive_compare
 terraform primitive_compare(a: &T, b: &T) where {T: concepts.Primitive}

@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local compile = require("compile")
+local compile = require("std@v0/compile")
 
 import "terratest@v1/terratest"
 

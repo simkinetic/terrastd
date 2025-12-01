@@ -3,9 +3,9 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
-local blend = require("blend")
-local concepts = require("concepts")
+import "std@v0/terraform"
+local blend = require("std@v0/blend")
+local concepts = require("std@v0/concepts")
 
 local tmath = {}
 local C = terralib.includecstring[[

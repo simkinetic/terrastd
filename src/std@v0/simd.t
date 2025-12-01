@@ -3,12 +3,12 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local concepts = require("concepts")
-local parametrized = require("parametrized")
+local concepts = require("std@v0/concepts")
+local parametrized = require("std@v0/parametrized")
 
 local SIMD = parametrized.type(function(T, N) return vector(T, N) end)
 
-import "terraform"
+import "std@v0/terraform"
 
 local load = terralib.memoize(function(N)
     local load

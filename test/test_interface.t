@@ -4,11 +4,11 @@
 -- SPDX-License-Identifier: MIT
 
 import "terratest@v1/terratest"
-import "terraform"
+import "std@v0/terraform"
 
-local base = require("base")
-local interface = require("interface")
-local concepts = require("concepts")
+local base = require("std@v0/base")
+local interface = require("std@v0/interface")
+local concepts = require("std@v0/concepts")
 
 testenv "Simple interface" do
 	local A = interface.newinterface("A")

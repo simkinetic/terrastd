@@ -3,10 +3,10 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
+import "std@v0/terraform"
 
-local impl = require("concept-impl")
-local para = require("concept-parametrized")
+local impl = require("std@v0/concept-impl")
+local para = require("std@v0/concept-parametrized")
 
 local Base = impl.Base
 local newconcept = impl.newconcept

@@ -3,8 +3,8 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base")
-local templates = require("template")
+local base = require("std@v0/base")
+local templates = require("std@v0/template")
 
 local newinterface = terralib.memoize(function(name)
     local interface = terralib.types.newstruct(name)

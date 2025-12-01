@@ -5,7 +5,7 @@
 
 import "terratest@v1/terratest"
 
-local tupl = require("tuple")
+local tupl = require("std@v0/tuple")
 
 testenv "istuple" do
     testset "Integer tuple" do

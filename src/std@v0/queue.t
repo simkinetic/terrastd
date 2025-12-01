@@ -5,13 +5,14 @@
 
 require "terralibext"
 
-local alloc = require("alloc")
-local atomics = require("atomics")
-local base = require("base")
-local parametrized = require("parametrized")
+local alloc = require("std@v0/alloc")
+local atomics = require("std@v0/atomics")
+local base = require("std@v0/base")
+local parametrized = require("std@v0/parametrized")
+local stack = require("std@v0/stack")
+local pthread = require("std@v0/pthread")
+
 local sched = terralib.includec("sched.h")
-local stack = require("stack")
-local pthread = require("pthread")
 
 local LockFreeQueue = parametrized.type(function(T)
     -- Design inspired by https://github.com/bittnkr/uniq

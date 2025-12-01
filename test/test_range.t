@@ -4,14 +4,14 @@
 -- SPDX-License-Identifier: MIT
 
 import "terratest@v1/terratest"
-import "terraform"
+import "std@v0/terraform"
 
 local io = terralib.includec("stdio.h")
-local alloc = require("alloc")
-local concepts = require("concepts")
-local nfloat = require("nfloat")
-local rn = require("range")
-local stack = require("stack")
+local alloc = require("std@v0/alloc")
+local concepts = require("std@v0/concepts")
+local nfloat = require("std@v0/nfloat")
+local rn = require("std@v0/range")
+local stack = require("std@v0/stack")
 
 local DefaultAllocator =  alloc.DefaultAllocator()
 local float256 = nfloat.FixedFloat(256)

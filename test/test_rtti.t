@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local rtti = require("rtti")
+local rtti = require("std@v0/rtti")
 
 import "terratest@v1/terratest"
 

@@ -3,12 +3,12 @@
 --
 -- SPDX-License-Identifier: MIT
 
-import "terraform"
+import "std@v0/terraform"
 
 local io = terralib.includec("stdio.h")
-local base = require("base")
-local concepts = require("concepts")
-local alloc = require('alloc')
+local base = require("std@v0/base")
+local concepts = require("std@v0/concepts")
+local alloc = require("std@v0/alloc")
 local size_t = uint64
 
 local Any = concepts.Any

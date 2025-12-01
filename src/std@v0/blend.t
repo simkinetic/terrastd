@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local fun = require("fun")
+local fun = require("std@v0/fun")
 
 local blend = function(check, istrue, isfalse)
     for _, arg in pairs{check, istrue, isfalse} do

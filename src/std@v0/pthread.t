@@ -3,7 +3,7 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local base = require("base") -- AbstractBase
+local base = require("std@v0/base") -- AbstractBase
 
 local C = terralib.includec("stdio.h")
 

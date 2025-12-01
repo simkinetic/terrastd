@@ -14,7 +14,10 @@ tinymt32.o: tinymt32.c
 tinymt64.o: tinymt64.c
 	$(CC) $(CFLAGS) $^ -c -o $@
 
-.PHONY: clean realclean
+install: all
+	cp libtinymt.$(dyn) $(INSTALL_DIR)/
+
+.PHONY: clean realclean install
 
 clean:
 	$(RM) tinymt32.o tinymt64.o

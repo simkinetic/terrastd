@@ -11,7 +11,10 @@ libhash.$(dyn): hashmap.o
 hashmap.o: hashmap.c hashmap.h
 	$(CC) $(CFLAGS) $< -c -o $@
 
-.PHONY: clean realclean
+install: all
+	cp libhash.$(dyn) $(INSTALL_DIR)/
+
+.PHONY: clean realclean install
 
 clean:
 	$(RM) hashmap.o

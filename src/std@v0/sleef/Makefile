@@ -11,6 +11,9 @@ libsleef: CMakeLists.txt
 
 .PHONY: clean realclean
 
+install: all
+	cp build-sleef/lib/libsleef.$(dyn) $(INSTALL_DIR)/
+
 clean:
 
 realclean: clean

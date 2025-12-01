@@ -20,7 +20,10 @@ libpcg.$(dyn): $(OBJ)
 $(OBJ): %.o: %.c
 	$(CC) $(CFLAGS) $^ -c -o $@
 
-.PHONY: clean realclean
+install: all
+	cp libpcg.$(dyn) $(INSTALL_DIR)/
+
+.PHONY: clean realclean install
 
 clean:
 	$(RM) $(OBJ)

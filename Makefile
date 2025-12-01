@@ -18,16 +18,24 @@ TERRAFLAGS?=-g
 
 CFLAGS=-O2 -march=native -fPIC -g
 
-export dyn CFLAGS SOURCE_DIR TERRA TERRAFLAGS
+INSTALL_DIR ?= $(abspath lib/std@v0)
+
+export dyn CFLAGS SOURCE_DIR TERRA TERRAFLAGS INSTALL_DIR
 
 SUBDIRS = hashmap pcg tinymt sleef
 
-.PHONY: all clean realclean $(SUBDIRS)
+.PHONY: all clean realclean install $(SUBDIRS)
 
 all: $(SUBDIRS)
 
 $(SUBDIRS):
 	$(MAKE) -C $(SOURCE_DIR)/$@
+
+install: all
+	mkdir -p $(INSTALL_DIR)
+	for dir in $(SUBDIRS); do \
+		$(MAKE) -C $(SOURCE_DIR)/$$dir install; \
+	done
 
 clean:
 	for dir in $(SUBDIRS); do \
